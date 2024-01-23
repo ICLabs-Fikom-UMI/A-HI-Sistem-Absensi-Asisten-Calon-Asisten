@@ -3,7 +3,7 @@ const video = document.getElementById("video");
 Promise.all([
   faceapi.nets.ssdMobilenetv1.loadFromUri("public/assets/weights"),
   faceapi.nets.faceRecognitionNet.loadFromUri("public/assets/weights"),
-  faceapi.nets.faceLandmark68Net.loadFromUri("public/assets/weights")
+  faceapi.nets.faceLandmark68Net.loadFromUri("public/assets/weights"),
 ]).then(startWebcam);
 
 function startWebcam() {
@@ -62,7 +62,7 @@ video.addEventListener("play", async () => {
       attendaceTime: currentTime.toISOString(),
     }
     // Send data to the server using AJAX
-    fetch('/path/to/your/php/controller', {
+    fetch('app/controllers/Attendance.php', {
       method: 'POST', 
       headers: {
         'Content-Type': 'application/json',

@@ -3,17 +3,21 @@
 class Home extends Controller{
     public function index($a = '', $b = '', $c = ''){
         $kehadiran = new Kehadiran;
-        show("this is INDEX function");
+        // show("this is INDEX function");
         $this->view('home');
     }
 
     public function edit($a='', $b='', $c=''){
-        show("this is EDIT function");
+        // show("this is EDIT function");
+    }
+
+    public function login($a='', $b='', $c=''){
+        $this->view('login');
     }
     
     public function saveFacedata(){
         $this->view('facerecognition');
-        // Retrieve data from the AJAX request
+        // // Retrieve data from the AJAX request
         // $data = json_decode(file_get_contents("php://input"), true);
 
         // // Assuming $data['detections'] contains the face descriptors
