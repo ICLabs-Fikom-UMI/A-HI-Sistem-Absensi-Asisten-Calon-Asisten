@@ -10,11 +10,11 @@
     <img src="<?=ROOT?>assets/images/NIKON D75001990 (1).JPG" alt="ceritanya gambar">
     <div class="kotak-putih">
         <div class="container">
-            <form class="login-form">
+            <form action="<?=ROOT?>controllers/Login/login" class="login-form" method="post">
             <h2>Login</h2>
             <input type="text" placeholder="Username" name="username" required>
             <input type="password" placeholder="Password" name="password" required>
-            <input type="submit" value="Login">
+            <input type="submit">
             </form>
         </div>
     </div>

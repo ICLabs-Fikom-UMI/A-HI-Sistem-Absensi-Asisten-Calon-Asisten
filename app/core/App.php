@@ -1,8 +1,9 @@
 <?php
 class App{
 
-    private $controller = 'home'; // default controller to prevent mistype
-    private $method = 'index'; // default method to prevent mistype
+    private $controller = 'Home'; // default controller to prevent mistype
+    private $method = 'faceRecognition'; // default method to prevent mistype
+
     private function split_url(){
         $URL = $_GET['url'] ?? 'home'; // when the user type something error it will go directly to the home page
         $URL = explode("/", trim($URL,'/')); // Seperate the string based on the delimiter we set on the first delimiter
